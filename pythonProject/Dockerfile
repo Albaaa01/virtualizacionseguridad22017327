@@ -1,7 +1,7 @@
-# Each student must fill this file with the correct information
-LABEL authors = "christiansucuzhanayarevalo 21535220"
-LABEL version = "1.0"
-LABEL description = "Dockerfile for a custom image of Kali Linux OS"
+#Each student must fill this file with the correct information
+#LABEL authors = "christiansucuzhanayarevalo 21535220"
+#LABEL version = "1.0"
+#LABEL description = "Dockerfile for a custom image of Kali Linux OS"
 
 # Pull Kali Linux OS from a Docker Hub repository
 FROM kalilinux/kali-rolling
@@ -10,9 +10,7 @@ FROM kalilinux/kali-rolling
 RUN apt-get update
 
 # Install the following packages for our custom image
-RUN apt-get install -y \
-    nmap \
-    metasploit-framework \
+RUN apt-get install -y nmap
 
 # Set credentials for the root user, ROOT = all privileges, 21535220 = password
 ENV USER root
