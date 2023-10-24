@@ -9,6 +9,9 @@ RUN apt-get update
 
 # Install the following packages for our custom image
 RUN apt-get install -y nmap
+RUN apt-get install -y nano
+# Instalar pip
+RUN apt-get update && apt-get install -y python3-pip
 FROM jupyter/minimal-notebook:latest
 # Set credentials for the root user, ROOT = all privileges, 21535220 = password
 ENV USER root
